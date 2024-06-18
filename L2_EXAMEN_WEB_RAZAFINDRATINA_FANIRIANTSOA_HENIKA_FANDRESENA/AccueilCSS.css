@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main .liste .livre-container {
+  height: 450px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 0px 15px 0px;
+}
+main {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+main .detail {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  gap: 30px;
+}
+main .ajout {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  gap: 30px;
+}
+main .detail section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .detail .img img {
+  height: 80%;
+  width: 80%;
+}
+main .detail .description {
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: 20px;
+}
+main .entete-liste {
+  width: 80%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .entete-ajout {
+  width: 80%;
+  margin-bottom: 150px;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+main .entete-detail {
+  width: 80%;
+  margin-bottom: 150px;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+main .entete-modification {
+  width: 80%;
+  margin-bottom: 150px;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+main .entete-liste h1 {
+  font-size: 60px;
+}
+main .entete-detail h1 {
+  font-size: 60px;
+}
+main .entete-modification h1 {
+  font-size: 60px;
+}
+main .entete-ajout h1 {
+  font-size: 60px;
+}
+main .liste {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  height: auto;
+}
+main .liste .livre-container img {
+  height: 300px;
+  width: 90%;
+  cursor: pointer;
+}
+main .liste .livre-container button {
+  height: 35px;
+  width: 80px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+main .liste .livre-container div {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+main .liste .livre-container .info {
+  flex-direction: column;
+}
+main .liste .livre-container .modifier {
+  background-color: green;
+}
+main .liste .livre-container .supprimer {
+  background-color: red;
+}
+main .ajout {
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+main .ajout form {
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .ajout form input {
+  height: 55px;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 8px;
+  border: 2px solid rgb(190, 190, 190);
+  font-size: 18px;
+  outline: none;
+}
+main .ajout form button {
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(20, 23, 27);
+  font-size: 18px;
+  color: white;
+}
+main .ajout form label {
+  color: rgb(26, 26, 26);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main .modification {
+  height: auto;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+main .modification .modifier {
+  height: auto;
+  width: 80%;
+}
+main .modification form {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .modification form input {
+  height: 55px;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 8px;
+  border: 2px solid rgb(190, 190, 190);
+  font-size: 18px;
+  outline: none;
+}
+main .modification form button {
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(20, 23, 27);
+  font-size: 18px;
+  color: white;
+}
+main .modification form label {
+  color: rgb(26, 26, 26);
+  font-weight: bold;
+  font-size: 20px;
+}
+header {
+  height: 100px;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgb(99, 99, 99);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px 0px 50px;
+  align-items: center;
+  background-color: rgb(20, 23, 27);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header .menu {
+  display: none;
+}
+header nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: white;
+}
+
+header nav .search {
+  height: 50px;
+  width: 240px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(190, 190, 190);
+  outline: none;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  height: auto;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+header nav ul li {
+  cursor: pointer;
+}
+header nav ul input {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  padding-left: 20px;
+  outline: none;
+}
+header .triage {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 20px;
+  margin-right: 20px;
+}
+header .triage label {
+  white-space: nowrap;
+}
+header .triage select {
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(20, 23, 27);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+}
+footer div {
+  height: auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+}
+.slide-menu {
+  display: none;
+}
+@media (max-width: 965px) {
+  header nav {
+    display: none;
+  }
+  header .menu {
+    display: block;
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+  }
+  header .menu svg {
+    width: 80%;
+    height: 80%;
+    fill: white;
+  }
+  .slide-menu {
+    display: flex;
+    height: 500px;
+    width: 300px;
+    color: white;
+    background-color: rgb(20, 23, 27);
+    position: fixed;
+    top: 100px;
+    right: -400px;
+    transition: all 0.5s ease;
+    padding-top: 50px;
+  }
+  .slide-menu nav {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+  }
+  .slide-menu nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: white;
+  }
+
+  .slide-menu nav .search {
+    height: 50px;
+    width: 240px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(190, 190, 190);
+    outline: none;
+  }
+  .slide-menu nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 25px;
+    height: auto;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .slide-menu nav ul li {
+    cursor: pointer;
+  }
+  .slide-menu nav ul input {
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    padding-left: 20px;
+    outline: none;
+  }
+  .slide-menu .triage {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+    margin-right: 20px;
+  }
+  .slide-menu .triage label {
+    white-space: nowrap;
+  }
+  .slide-menu .triage select {
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  main .entete-liste h1 {
+    font-size: 40px;
+  }
+  main .entete-detail h1 {
+    font-size: 40px;
+  }
+  main .entete-modification h1 {
+    font-size: 40px;
+  }
+  main .entete-ajout h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 700px) {
+  main .detail {
+    flex-direction: column;
+  }
+  main .detail .description {
+    padding-left: 30px;
+  }
+  footer div {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

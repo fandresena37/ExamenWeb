@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./AccueilCSS.css" />
+    <title>Bibliotheque</title>
+  </head>
+  <body>
+    <div class="slide-menu">
+      <nav>
+        <ul>
+          <li onclick="List()">Liste</li>
+          <li onclick="showAjout()">Ajout</li>
+        </ul>
+        <div class="triage">
+          <label for="">Trier par : </label>
+          <select onchange="triage(this.value)">
+            <option value="titre" selected>titre</option>
+            <option value="auteur">auteur</option>
+            <option value="page">nombre de pages</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          class="search"
+          placeholder="rechercher"
+          oninput="rechercher(this)"
+        />
+      </nav>
+    </div>
+    <header>
+      <h1>Bibliotheque</h1>
+      <button class="menu" onclick="showMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </button>
+      <nav>
+        <ul>
+          <li onclick="List()">Liste</li>
+          <li onclick="showAjout()">Ajout</li>
+        </ul>
+        <div class="triage">
+          <label for="">Trier par : </label>
+          <select onchange="triage(this.value)">
+            <option value="titre" selected>titre</option>
+            <option value="auteur">auteur</option>
+            <option value="page">nombre de pages</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          class="search"
+          placeholder="rechercher"
+          oninput="rechercher(this)"
+        />
+      </nav>
+    </header>
+    <main>
+      <div class="entete-liste">
+        <h1>LISTE</h1>
+        <p>Cliquer l'image pour voir les details</p>
+      </div>
+      <div class="entete-ajout">
+        <h1>AJOUT D'UN NOUVEAU LIVRE</h1>
+      </div>
+      <div class="entete-detail">
+        <h1>DETAIL D'UN LIVRE</h1>
+      </div>
+      <div class="entete-modification">
+        <h1>MODIFICATION</h1>
+      </div>
+      <section id="liste" class="liste"></section>
+      <section class="detail" id="detail">
+        <section class="img">
+          <img src="" alt="" />
+        </section>
+        <section class="description">
+          <h1>DETAILS</h1>
+          <label for="" class="titre"></label>
+          <label for="" class="auteur"></label>
+          <label for="" class="desc"></label>
+          <label for="" class="page"></label>
+          <label for="" class="langue"></label>
+          <label for="" class="genre"></label>
+          <label for="" class="date"></label>
+          <label for="" class="dispo"></label>
+          <label for="" class="etat"></label>
+          <label for="" class="emp"></label>
+          <label for="" class="isbn"></label>
+          <label for="" class="editeur"></label>
+        </section>
+      </section>
+      <section class="ajout" id="ajout">
+        <form action="">
+          <label for="titre">titre</label>
+          <input type="text" placeholder="titre" />
+          <label for="auteur">auteur</label>
+          <input type="text" placeholder="auteur" />
+          <label for="">image</label>
+          <input type="text" placeholder="image" />
+          <label for="titre">resume</label>
+          <input type="text" placeholder="resume" />
+          <label for="titre">langue</label>
+          <input type="text" placeholder="langue" />
+          <label for="titre">nombre pages</label>
+          <input type="text" placeholder="nb pages" />
+          <label for="titre">genre</label>
+          <input type="text" placeholder="genre" />
+          <label for="titre">date de publication</label>
+          <input type="text" placeholder="date de publication" />
+          <label for="titre">disponibilité</label>
+          <input type="text" placeholder="disponibilité" />
+          <label for="titre">etat</label>
+          <input type="text" placeholder="etat" />
+          <label for="titre">emplacement</label>
+          <input type="text" placeholder="emplacement" />
+          <label for="titre">isbn</label>
+          <input type="text" placeholder="isbn" />
+          <label for="titre">editeur</label>
+          <input type="text" placeholder="editeur" />
+          <button class="btn-ajout" type="button" onclick="ajouter()">
+            Ajouter
+          </button>
+        </form>
+      </section>
+      <section id="modification" class="modification"></section>
+    </main>
+    <footer>
+      <div>
+        <p>&copy; 2024 Bibliotheque All Rights Reserved</p>
+        <p>Crée par Fandresena Razafindratina</p>
+      </div>
+    </footer>
+    <template id="livre">
+      <div class="livre-container">
+        <img src="./img L2/bd1.jpg" alt="" class="img" />
+        <div class="info">
+          <label for="" class="titre">mon titre</label>
+          <label for="" class="auteur"></label>
+          <label for="" class="page"></label>
+        </div>
+        <div>
+          <button class="btn modifier">Modifier</button>
+          <button class="btn supprimer">Supprimer</button>
+        </div>
+      </div>
+    </template>
+    <template id="modifier">
+      <section class="modifier" id="modifier">
+        <form action="">
+          <label for="titre">titre</label>
+          <input type="text" placeholder="titre" class="titre" />
+          <label for="auteur">auteur</label>
+          <input type="text" placeholder="auteur" class="auteur" />
+          <label for="">image</label>
+          <input type="text" placeholder="image" class="img" />
+          <label for="titre">resume</label>
+          <input type="text" placeholder="resume" class="desc" />
+          <label for="titre">langue</label>
+          <input type="text" placeholder="langue" class="langue" />
+          <label for="titre">nombre pages</label>
+          <input type="text" placeholder="nb pages" class="page" />
+          <label for="titre">genre</label>
+          <input type="text" placeholder="genre" class="genre" />
+          <label for="titre">date de publication</label>
+          <input type="text" placeholder="date de publication" class="date" />
+          <label for="titre">disponibilité</label>
+          <input type="text" placeholder="disponibilité" class="dispo" />
+          <label for="titre">etat</label>
+          <input type="text" placeholder="etat" class="etat" />
+          <label for="titre">emplacement</label>
+          <input type="text" placeholder="emplacement" class="emp" />
+          <label for="titre">isbn</label>
+          <input type="text" placeholder="isbn" class="isbn" />
+          <label for="titre">editeur</label>
+          <input type="text" placeholder="editeur" class="editeur" />
+          <button class="btn-ajout" type="button">modifier</button>
+        </form>
+      </section>
+    </template>
+  </body>
+  <script src="./AccueiJS.js"></script>
+</html>
